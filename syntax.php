@@ -15,13 +15,19 @@ lub
 jedno
 liniowe
 */
-        echo "Tu "."można "."pisać "."różnie";
+        echo "Tu "."można "."pisać "."różnie ";
         echo ("\ndruga możliwość\n");?><br><?php
-        echo ('trzecia możliwośc');
-        echo 'czwarta możliwość';?><br><?php
-        print("\nZgłasza sie funkcja print\n");
+        echo ('trzecia możliwośc ');
+        echo 'czwarta możliwość ';?><br><?php
+        print("\nZgłasza sie funkcja print \n ");
         print 'Znów zgłasza sie funkcja'.' print';?><br>
-        <?= "\nedytor"." tekstowy"?>
+        <?= "\nedytor"." tekstowy"?><br>
+    <p>Tu bez php</p>
+    <?= "szybkie wywołanie przy użyciu '<?=' w php" ?>
+<h2>Mieszanie html z php </h2><br>
+<?="troche php"?>
+<P>W php komentujemy jednoliniowo używając<b> "//", "#"</b></p><?= " wieloliniowo komentujemy używajkąc'/* ' na początu oraz kończąc '*/'"
+
 
 
 </body>
