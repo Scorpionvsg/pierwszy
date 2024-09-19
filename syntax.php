@@ -15,9 +15,9 @@ lub
 jedno
 liniowe
 */
-        echo "Tu "."można "."pisać "."różnie";<br>
+        echo "Tu "."można "."pisać "."różnie";
         print("\nZgłasza sie funkcja print\n");
-        print 'Znów zgłasza sie funkcja'.' print';?>
+        print 'Znów zgłasza sie funkcja'.' print';?><br>
         <?= "\nedytor"." tekstowy"?>
 
 
