@@ -15,8 +15,8 @@
 </head>
 <body>
     <?php
-    $miesiąc=rand(1,15);
-echo "<h1><center>$miesiąc</center></h1>";?>
+    $miesiąc=rand(1,15);?>
+<h1><?=echo "<center>$miesiąc</center">?></h1>;
 
 
 </body>
