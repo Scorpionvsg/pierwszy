@@ -16,9 +16,9 @@ jedno
 liniowe
 */
         echo "Tu "."można "."pisać "."różnie";
-        echo ("druga możliwość");
+        echo ("\ndruga możliwość\n");?><br><?php
         echo ('trzecia możliwośc');
-        echo 'czwarta możliwość';
+        echo 'czwarta możliwość';?><br><?php
         print("\nZgłasza sie funkcja print\n");
         print 'Znów zgłasza sie funkcja'.' print';?><br>
         <?= "\nedytor"." tekstowy"?>
