@@ -8,7 +8,7 @@
 <body>
     <?php
     //tu komantarze
-#różnego rodzaju
+#echo 'różnego rodzaju ';
 
 /*wielo
 lub 
@@ -16,12 +16,14 @@ jedno
 liniowe
 */
         echo "Tu "."można "."pisać "."różnie ";
-        echo ("\ndruga możliwość\n");?><br><?php
+        echo ("\ndruga możliwość\n");
         echo ('trzecia możliwośc ');
-        echo 'czwarta możliwość ';?><br><?php
+        echo 'czwarta możliwość ';
         print("\nZgłasza sie funkcja print \n ");
         print 'Znów zgłasza sie funkcja'.' print';?><br>
         <?= "\nedytor"." tekstowy"?><br>
+
+
     <p>Tu bez php</p>
     <?= "szybkie wywołanie przy użyciu '<?=' w php" ?>
 <h2>Mieszanie html z php </h2><br>
