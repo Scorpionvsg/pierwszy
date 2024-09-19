@@ -7,19 +7,19 @@
 </head>
 <body>
     <?php
-        echo "Tu "."można "."pisać "."różnie";
-        print("Zgłasza sie funkcja print");
-        print 'Znów zgłasza sie funkcja'.' print';?>
-        <?= "edytor"." tekstowy";
-//tu komantarze
+    //tu komantarze
 #różnego rodzaju
 
 /*wielo
 lub 
 jedno
 liniowe
-
 */
+        echo "Tu "."można "."pisać "."różnie";
+        print("Zgłasza sie funkcja print");
+        print 'Znów zgłasza sie funkcja'.' print';?>
+        <?= "edytor"." tekstowy"?>
+
 
 </body>
 </html>
