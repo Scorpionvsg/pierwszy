@@ -26,7 +26,7 @@ liniowe
     <?= "szybkie wywołanie przy użyciu '<?=' w php" ?>
 <h2>Mieszanie html z php </h2><br>
 <?="troche php"?>
-<P>W php komentujemy jednoliniowo używając<b> "//", "#"</b></p><?= " wieloliniowo komentujemy używajkąc'/* ' na początu oraz kończąc '*/'"
+<P>W php komentujemy jednoliniowo używając<b> "//", "#"</b></p><?= " wieloliniowo komentujemy używajkąc'/* ' na początu oraz kończąc '*/'"?>
 
 
 
