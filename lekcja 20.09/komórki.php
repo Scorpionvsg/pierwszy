@@ -6,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KOMÓRKI</title>
     <style>
-table, th, td {
-  border: 1px solid black;
-}
+        
 </style>
 </head>
 <body>
-    <tr>
+    <table>
+    
     <?php
+     
     $x=1;
-    while ($x)
-    echo "$x";
-    $x++;
+    while ($x <= 5){
+        echo '<tr><td> gsdg</td></tr>' ;
+        
+        $x+=1;
+    }  
 ?>
-</tr>
+</table>
 </body>
 </html>
