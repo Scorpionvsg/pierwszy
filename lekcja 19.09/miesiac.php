@@ -7,8 +7,8 @@
     <style>
         #h1{
             border-width: 4px; 
-            border-style: dotted;
-            border-color: pink;
+            border-top: 4px dotted blue;
+            border-bottom: 4px dotted blue;
             text-align: center
         }
         #h3{
@@ -23,19 +23,45 @@
 <body>
     <?php
     $miesiąc=rand(1,15);?>
-<h1><?=echo "<center>$miesiąc</center">?></h1>;
+<h1><?= "<center>$miesiąc</center"?></h1>
+
+
 <h3><?php
     switch($miesiąc){
-        case 1,2,3:
+        case 1:
             echo "I Kwartał";
             break;
-        case 4,5,6:
+        case 2:
+            echo "I Kwartał";
+            break;
+        case 3:
+            echo "I Kwartał";
+            break;
+        case 4:
             echo "II Kwartał";
             break;
-        case 7,8,9:
+        case 5:
+            echo "II Kwartał";
+            break;
+        case 6:
+            echo "II Kwartał";
+             break;
+        case 7:
             echo "III Kwartał";
             break;
-        case 10,11,12:
+        case 8:
+            echo "III Kwartał";
+            break;
+        case 9:
+            echo "III Kwartał";
+            break;
+        case 10:
+             echo "IV Kwartał";
+             break;
+            case 11:
+            echo "IV Kwartał";
+            break;
+        case 12:
             echo "IV Kwartał";
             break;
         default: 
