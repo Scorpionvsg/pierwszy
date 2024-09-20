@@ -56,12 +56,21 @@
             echo "III Kwartał";
             break;
         case 10:
-             echo "IV Kwartał";
+             echo "III Kwartał";
              break;
             case 11:
             echo "IV Kwartał";
             break;
         case 12:
+            echo "IV Kwartał";
+            break;
+        case 13:
+            echo "IV Kwartał";
+            break;
+        case 14:
+            echo "IV Kwartał";
+            break;
+        case 15:
             echo "IV Kwartał";
             break;
         default: 
