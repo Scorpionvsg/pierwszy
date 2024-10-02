@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PL-pl">
 <head>
-<style> tr { border: 1px solid black; } 
+<style> 
+    td { border: 2px solid black;
+        padding: 20px;
+         } 
 </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,21 +12,23 @@
     <title>Piąteczek</title>
 </head>
 <body>
-    <?php
-    $tg=["pon","wto","śro","czw","pią","sob","nie"];
-    foreach($tg AS $pom){
-        ?>
-<table>
-
- <tr><td >1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td></tr>  
+    
+    <table>
 
 
+        
+    <tr  text-align:center;> <?php 
+        $tg=["pon","wto","śro","czw","pią","sob","nie"];
+        foreach($tg AS $pom => $bom){?> 
+         <?php if($pom % 2 ==1){
+            echo '<td style="background-color: cyan;">'.$bom.'</td>';
+        } else { echo '<td>'.$bom.'</td>';} }?>
+    </tr>  
 
+
+  
     </table>
-<?php
 
-    }
 
-    ?>
 </body>
 </html>
