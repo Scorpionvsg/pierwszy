@@ -2,8 +2,9 @@
 <html lang="PL-pl">
 <head>
 <style> 
-    td { border: 2px solid black;
+    table, tr ,td { border: 2px solid black;
         padding: 20px;
+        border-collapse: collapse;
          } 
 </style>
     <meta charset="UTF-8">
@@ -20,7 +21,7 @@
     <tr  text-align:center;> <?php 
         $tg=["pon","wto","śro","czw","pią","sob","nie"];
         foreach($tg AS $pom => $bom){?> 
-         <?php if($pom % 2 ==1){
+         <?php if($pom % 2 == 1){
             echo '<td style="background-color: cyan;">'.$bom.'</td>';
         } else { echo '<td>'.$bom.'</td>';} }?>
     </tr>  
