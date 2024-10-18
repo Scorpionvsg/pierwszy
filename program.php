@@ -8,7 +8,7 @@ $c=$a-$b;
 echo "różnica tych liczb to: ". $c;
 $c=$a*$b;
 echo "iloczyn tych liczb to: ". $c;
-if($b=<0){
+if($b<=0){
   echo " nie przez zero";
 }else{
 $c=$a/$b;
