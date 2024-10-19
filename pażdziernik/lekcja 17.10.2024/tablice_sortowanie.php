@@ -47,7 +47,7 @@ asort($tb);
 
 <pre>
     <table>
-        <caption>Sortowanie rosnąco według wartości(ksort)</caption>
+        <caption>Sortowanie rosnąco według kluczy(ksort)</caption>
             <?php
 asort($tb);
          ?><tr><th>Klucz</th><th>Wartości</th></tr><?php
@@ -61,7 +61,7 @@ asort($tb);
 </pre>
 <pre>
     <table>
-        <caption>Sortowanie rosnąco według wartości(arsort)</caption>
+        <caption>Sortowanie malejąco według wartości(arsort)</caption>
             <?php
 arsort($tb);
          ?><tr><th>Klucz</th><th>Wartości</th></tr><?php
@@ -76,7 +76,7 @@ arsort($tb);
 
 <pre>
     <table>
-        <caption>Sortowanie rosnąco według wartości(krsort)</caption>
+        <caption>Sortowanie malejąco według kluczy(krsort)</caption>
             <?php
 krsort($tb);
          ?><tr><th>Klucz</th><th>Wartości</th></tr><?php
