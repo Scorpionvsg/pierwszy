@@ -1,3 +1,14 @@
+<?php
+    class Reszta{
+        public $a;
+        public $b;
+        public $wyn;
+        function reszta(){
+            $this->wyn =$this->a%$this->b;
+            return $this->wyn;
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
@@ -13,15 +24,6 @@
 </head>
 <body>
     <?php
-    class Reszta{
-        public $a;
-        public $b;
-        public $wyn;
-        function reszta(){
-            $this->wyn =$this->a%$this->b;
-            return $this->wyn;
-        }
-    }
     
 $wynik=new Reszta();
 $wynik->a=12;
