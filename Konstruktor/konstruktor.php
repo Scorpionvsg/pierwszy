@@ -2,12 +2,12 @@
 class Arytmetyka{
     public ?float $x= NULL;
     public ?float $y= NULL;
-    function __construct($a,$b){
+    public function __construct($a,$b){
         $this ->x=$a;
         $this->y=$b;
     }
 
-    function reszta(){
+    public function reszta(){
         if($this->y==0){
             return "Druga liczba nie może być zerem";
         }else{
@@ -15,24 +15,24 @@ class Arytmetyka{
         }
 
     }
-    function suma(){
+    public function suma(){
         return $this->x+$this->y;
     }
-    function roznica(){
+    public function roznica(){
         return $this->x-$this->y;
     }
-    function iloczyn(){
+    public function iloczyn(){
 
         return $this->x*$this->y;
     }
-    function iloraz(){
+    public function iloraz(){
         if($this->y==0){
             echo "Druga liczba nie może być zerem";
         }else{
             return $this->x/$this->y;
         }
     }
-    function potega(){
+    public function potega(){
         return $this->x**$this->y;
     }
 
