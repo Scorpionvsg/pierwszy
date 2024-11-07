@@ -9,9 +9,9 @@ class Arytmetyka{
 
     public function reszta(){
         if($this->y==0){
-            return "Druga liczba nie może być zerem";
-        }else{
             return $this->x%$this->y;
+        }else{
+            return "Druga liczba nie może być zerem";
         }
 
     }
