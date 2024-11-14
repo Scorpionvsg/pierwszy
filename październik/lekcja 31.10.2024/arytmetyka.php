@@ -60,12 +60,12 @@
     $pom->x=4;
     $pom->y=0;
     ?>
-    <li>  Suma liczb <b><?php echo$pom->x?></b> i <b><?php echo$pom->y?></b> wynosi <b><?php echo $pom->suma();?></b></li>
-    <li>  Różnica liczb <b><?php echo$pom->x?></b> i <b><?php echo$pom->y?></b> wynosi <b><?php echo $pom->różnica();?></b></li>
-    <li>  Iloczyn liczb <b><?php echo$pom->x?></b> i <b><?php echo$pom->y?></b> wynosi <b><?php echo $pom->iloczyn();?></b></li>
-    <li>  Iloraz liczb <b><?php echo$pom->x?></b> i <b><?php echo$pom->y?></b> wynosi <b><?php echo $pom->iloraz();?></b></li>
-    <li>  Reszta z dzielenia liczb <b><?php echo$pom->x?></b> i <b><?php echo$pom->y?></b> wynosi <b><?php echo $pom->reszta();?></b></li>
-    <li>  Liczba <b><?php echo$pom->x?></b> do potęgi <b><?php echo$pom->y?></b> wynosi <b><?php echo $pom->potęga();?></b></li>
+    <li>  Suma liczb <b><?php echo $pom->x?></b> i <b><?php echo $pom->y?></b> wynosi <b><?php echo $pom->suma();?></b></li>
+    <li>  Różnica liczb <b><?php echo $pom->x?></b> i <b><?php echo $pom->y?></b> wynosi <b><?php echo $pom->różnica();?></b></li>
+    <li>  Iloczyn liczb <b><?php echo $pom->x?></b> i <b><?php echo $pom->y?></b> wynosi <b><?php echo $pom->iloczyn();?></b></li>
+    <li>  Iloraz liczb <b><?php echo $pom->x?></b> i <b><?php echo $pom->y?></b> wynosi <b><?php echo $pom->iloraz();?></b></li>
+    <li>  Reszta z dzielenia liczb <b><?php echo $pom->x?></b> i <b><?php echo $pom->y?></b> wynosi <b><?php echo $pom->reszta();?></b></li>
+    <li>  Liczba <b><?php echo $pom->x?></b> do potęgi <b><?php echo $pom->y?></b> wynosi <b><?php echo $pom->potęga();?></b></li>
 </ul>
 </body>
 </html>
