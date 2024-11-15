@@ -1,4 +1,4 @@
-z<?php
+<?php
 class Arytmetyka{
     public ?float $x= NULL;
     public ?float $y= NULL;
