@@ -7,18 +7,18 @@ class MG{
         $this->subs=$s;
         $this->prom=$r;
     }
-    private function obj(){
-        $obj=((4*pi()*pow($this->prom,3))/3)/1000000;
+    private function obj():float{
+        $obj=((4*pi()*pow($this->prom,3))/3);
         return $obj;
         
     }
-    public function masa(){
+    public function masa():float{
         $gips=2350;
         $rtec=13534;
         $zloto=19280;
         $woda=997;
         if(strcasecmp($this->subs,"gips")==0){
-            return number_format($this->obj()*$gips,3,",");
+            return $this->obj()*$gips;
         }else if (strcasecmp($this->subs,"rtec")==0){
             return number_format($this->obj()*$rtec,3,",");
         }else if(strcasecmp($this->subs,"zloto")==0){

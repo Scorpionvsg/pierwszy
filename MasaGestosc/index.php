@@ -14,17 +14,17 @@
 </head>
 <body>
     <?php
-    $gip= new MG("gips",5);
+    $gip= new MG("gips",0.05);
     $rte= new MG("rtec",5);
     $zlo= new MG("zloto",5);
     $wod= new MG("woda",5);
 
     ?>
 <ol type="I">
-    <li>Masa kulki <b>gipsu</b> o promieniu <u>5cm</u>: <mark><?= $gip->masa()?></mark> kg</li>
-    <li>Masa kulki <b>rtęci</b> o promieniu <u>5cm</u>: <mark><?= $rte->masa()?></mark> kg</li>
-    <li>Masa kulki <b>złota</b> o promieniu <u>5cm</u>: <mark><?= $zlo->masa()?></mark> kg</li>
-    <li>Masa kulki <b>wody</b> o promieniu <u>5cm</u>: <mark><?= $wod->masa()?></mark> kg</li>
+    <li>Masa kulki <b>gipsu</b> o promieniu <u>5cm</u>: <mark><?= number_format($gip->masa(),3,",")?> kg</mark> </li>
+    <li>Masa kulki <b>rtęci</b> o promieniu <u>5cm</u>: <mark><?= number_format$rte->masa()?> kg</mark></li>
+    <li>Masa kulki <b>złota</b> o promieniu <u>5cm</u>: <mark><?= $zlo->masa()?> kg</mark></li>
+    <li>Masa kulki <b>wody</b> o promieniu <u>5cm</u>: <mark><?= $wod->masa()?> kg</mark></li>
 
 </ol>
 </body>
