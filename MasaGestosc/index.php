@@ -9,15 +9,16 @@
     body{
         background-color:linen;
         font-family:"Calibri";
+        padding:20px;
     }
     </style>
 </head>
 <body>
     <?php
     $gip= new MG("gips",0.05);
-    $rte= new MG("rtec",5);
-    $zlo= new MG("zloto",5);
-    $wod= new MG("woda",5);
+    $rte= new MG("rtec",0.05);
+    $zlo= new MG("zloto",0.05);
+    $wod= new MG("woda",0.05);
 
     ?>
 <ol type="I">
