@@ -9,12 +9,12 @@ class kula{
         return number_format($obw,2,","," ");
     }
     public function pole(){
-        $obj=4*pi()*$this->radius*$this->radius;
-        return number_format($obj,2,","," ");
+        $pole=4*pi()*$this->radius*$this->radius;
+        return number_format($pole,2,","," ");
     }
     public function objetosc(){
-        $pole=(4*pi()*pow($this->radius,3))/3;
-        return number_format($pole,2,","," ");
+        $obj=(4*pi()*pow($this->radius,3))/3;
+        return number_format($obj,2,","," ");
     }
 }
 ?>
