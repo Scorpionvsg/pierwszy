@@ -20,11 +20,11 @@ class MG{
         if(strcasecmp($this->subs,"gips")==0){
             return $this->obj()*$gips;
         }else if (strcasecmp($this->subs,"rtec")==0){
-            return number_format($this->obj()*$rtec,3,",");
+            return $this->obj()*$rtec;
         }else if(strcasecmp($this->subs,"zloto")==0){
-            return number_format($this->obj()*$zloto,3,",");
+            return $this->obj()*$zloto;
         }else if(strcasecmp($this->subs,"woda")==0){
-            return number_format($this->obj()*$woda,3,",");
+            return $this->obj()*$woda;
         }else
         return "Źle podano nazwe substancji";
     }

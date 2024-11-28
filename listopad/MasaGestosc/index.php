@@ -22,9 +22,9 @@
     ?>
 <ol type="I">
     <li>Masa kulki <b>gipsu</b> o promieniu <u>5cm</u>: <mark><?= number_format($gip->masa(),3,",")?> kg</mark> </li>
-    <li>Masa kulki <b>rtęci</b> o promieniu <u>5cm</u>: <mark><?= number_format($rte->masa(),3,",")?> kg</mark></li>
-    <li>Masa kulki <b>złota</b> o promieniu <u>5cm</u>: <mark><?= number_format($zlo->masa()3,",")?> kg</mark></li>
-    <li>Masa kulki <b>wody</b> o promieniu <u>5cm</u>: <mark><?= number_format($wod->masa()3,",")?> kg</mark></li>
+    <li>Masa kulki <b>rtęci</b> o promieniu <u>5cm</u>: <mark><?= number_format$rte->masa()?> kg</mark></li>
+    <li>Masa kulki <b>złota</b> o promieniu <u>5cm</u>: <mark><?= $zlo->masa()?> kg</mark></li>
+    <li>Masa kulki <b>wody</b> o promieniu <u>5cm</u>: <mark><?= $wod->masa()?> kg</mark></li>
 
 </ol>
 </body>
