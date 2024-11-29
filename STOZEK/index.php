@@ -27,9 +27,9 @@
 </head>
 <body>
     <?php 
-    $r=10;
-    $h=10;
-    $j="km";
+    $r=5;
+    $h=50;
+    $j="m";
     $obj= new stoz($r,$h)?>
     <div>
     <p>Stożek</p>
