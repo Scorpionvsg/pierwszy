@@ -23,6 +23,7 @@
     <?php
     $validform=true;
     $product_error='';
+    $pack_error='';
     if($_SERVER["REQUEST_METHOD"]==="POST"){
         if(EMPTY(TRIM($_POST["product_name"]))){
             $product_error="Podaj nazwe towaru";
