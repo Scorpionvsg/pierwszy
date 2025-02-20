@@ -26,7 +26,6 @@
         }
         input[type="checkbox"]{
             accent-color:tan;
-            transform:scale();
         }
         
         
