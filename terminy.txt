@@ -1,0 +1,80 @@
+2025-02-20 23:02:55
+Array
+(
+    [terminy] => Array
+        (
+            [0] => termin_1
+            [1] => termin_4
+            [2] => termin_5
+        )
+
+    [miesac_rok_1] => 2025-03
+    [miesac_rok_2] => 2025-03
+    [miesac_rok_3] => 2025-01
+    [miesac_rok_4] => 
+    [miesac_rok_5] => 2025-03
+    [Zapisz] => Zapisz
+)
+Data zapisu: 2025-02-20 23:07:12
+Termin 1: 2025-02
+2025-02-20 23:08:24
+Array
+(
+    [terminy] => Array
+        (
+            [0] => termin_1
+        )
+
+    [miesac_rok_1] => 2025-03
+    [miesac_rok_2] => 
+    [miesac_rok_3] => 
+    [miesac_rok_4] => 
+    [miesac_rok_5] => 
+    [Zapisz] => Zapisz
+)
+2025-02-20 23:14:28
+Array
+(
+    [terminy] => Array
+        (
+            [0] => termin_1
+        )
+
+    [miesac_rok_1] => 2025-03
+    [miesac_rok_2] => 
+    [miesac_rok_3] => 
+    [miesac_rok_4] => 
+    [miesac_rok_5] => 
+    [Zapisz] => Zapisz
+)
+2025-02-20 23:19:31
+Array
+(
+    [terminy] => Array
+        (
+            [0] => termin_1
+        )
+
+    [miesac_rok_1] => 2025-03
+    [miesac_rok_2] => 
+    [miesac_rok_3] => 
+    [miesac_rok_4] => 
+    [miesac_rok_5] => 
+    [Zapisz] => Zapisz
+)
+2025-02-20 23:21:55
+Array
+(
+    [terminy] => Array
+        (
+            [0] => termin_1
+            [1] => termin_3
+        )
+
+    [miesac_rok_1] => 2025-07
+    [miesac_rok_2] => 2025-07
+    [miesac_rok_3] => 
+    [miesac_rok_4] => 2025-07
+    [miesac_rok_5] => 
+    [Zapisz] => Zapisz
+)

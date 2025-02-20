@@ -36,11 +36,23 @@
         <table>
             <caption>Terminy</caption>
             <?php
-            for($i=1;$i<=5;$i++){?>
+            $save = false;
+            for($i=1;$i<=5;$i++){
+                $term_value = 'termin_'.$i;
+                $month_year_name = 'miesac_rok_'.$i;
+                $checked = isset($_POST['terminy']) && (in_array($term_value, $_POST['terminy'] ?? []) && !empty($_POST[$month_year_name]));
+                $month_year_value = $checked ? $_POST[$month_year_name]:'';
+                $save = ($save || $month_year_value) ? true : false; ?>
                 <tr>
-                    <td><label for="termin_<?=$i?>">Termin<?=$i?>:</label></td>
-                    <td> <input type="checkbox" id=termin_<?=$i?> name="terminy[]" value="termin_<?=$i?>"> </td>
-                    <td><input type="month" name="months[]"></td>
+                    <td>
+                        <label for="termin_<?=$i?>">Termin<?=$i?>:</label>
+                    </td>
+                    <td>
+                         <input <?= $checked ?> id=termin_<?=$i?> name="terminy[]" type="checkbox" value="<?= $term_value?>" <?=$checked ? 'checked' : '' ?>> 
+                    </td>
+                    <td>
+                        <input type="month" name="<?=$month_year_name?>" value="<?=$month_year_value?>">
+                    </td>
                 </tr>
             <?php
             }
@@ -48,9 +60,19 @@
             <tr><td colspan="3" style="text-align:center"><input type="submit" name="Zapisz" value="Zapisz"></td></tr>
         </table>
     </form>
-    
     <?php 
+    if($_SERVER['REQUEST_METHOD']==='POST'){
+        if($save){
+            $filename = 'terminy.txt';
+            $fileHandle = fopen($filename,'a');
+            $myData = date('Y-m-d H:i:s')."\n". print_r($_POST,true);
+            fwrite($fileHandle,$myData);
+            fclose($fileHandle);
+            echo '<p>Dane zostały zapisane do pliku ',$filename. '</p>';
+        }
+    }
     print_r($_POST);
+    var_dump($save);
     ?>
 
 </body>

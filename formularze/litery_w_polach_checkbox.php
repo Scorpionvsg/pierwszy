@@ -34,7 +34,7 @@
             <input type="submit" id="wybierz" name="Wybierz" value="wybierz"><br><br>
         
         <?php
-        if($_SERVER["REQUEST_METHOD"]=="POST"){
+        if($_SERVER["REQUEST_METHOD"]==="POST"){
             if(isset($_POST["litery"])){
                 if(count($_POST["litery"])===1){
                     echo ("Ta litera została wybrana: ");
