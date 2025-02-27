@@ -1,0 +1,3 @@
+2025-02-27 20:15:44
+{"terminy":["termin_1"],"miesac_rok_1":"2025-03","miesac_rok_2":"","miesac_rok_3":"","miesac_rok_4":"","miesac_rok_5":"","Zapisz":"Zapisz"}2025-02-27 20:15:59
+{"terminy":["termin_1","termin_2","termin_4"],"miesac_rok_1":"2025-03","miesac_rok_2":"","miesac_rok_3":"2025-03","miesac_rok_4":"2025-03","miesac_rok_5":"2025-08","Zapisz":"Zapisz"}

@@ -1,3 +1,4 @@
+<?php include_once "css.html";?>
 <!DOCTYPE html>
 <html lang="PL-pl">
 <head>
@@ -9,10 +10,13 @@
 <body>
     <?php include "menu.php";?>
     <h1>Autoryzacja</h1>
+    <label for="login">Login:<input type="text" id="nam" name="login"></label><br><br>
+    <label for="haslo">Hasło:<input type="password" id="pass" name="haslo"></label>
     <?php
         if($_SERVER['REQUEST_METHOD']==='POST'){
             if(isset($_POST["wyloguj"])){
-
+                session_unset();
+                session_destroy();
             }
             if(isset($_POST["zaloguj"])){
                 if($_POST['login']==='admin' && $_POST['pass']==='admin'){

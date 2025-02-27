@@ -3,4 +3,35 @@
         text-align: center;
         background-color: orange;
     }
+    body{
+        background-color: lightsalmon;
+    }
+    div{
+        text-align: center;
+    }
+    .button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: buttonFadeIn 0.5s ease-out;
+}
+.button:hover {
+    background-color: #0056b3; 
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.button:active, .button.clicked {
+    background-color: #003f7f; 
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+label{
+    margin: 10px;
+}
 </style>
