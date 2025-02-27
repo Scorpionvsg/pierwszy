@@ -66,7 +66,7 @@
         if($save){
             $filename = 'terminy.txt';
             $file = fopen($filename,'a');
-            $myData = date('Y-m-d H:i:s')."\n". print_r($_POST,true);
+            $myData = date('Y-m-d H:i:s')."\n". json_encode($_POST);
             fwrite($file,$myData);
             fclose($file);
             echo '<p>Dane zostały zapisane do pliku ',$filename. '</p>';
