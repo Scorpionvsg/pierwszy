@@ -1,0 +1,18 @@
+2025-02-27 15:53:30
+Array
+(
+    [terminy] => Array
+        (
+            [0] => termin_1
+            [1] => termin_3
+            [2] => termin_4
+            [3] => termin_5
+        )
+
+    [miesac_rok_1] => 2025-03
+    [miesac_rok_2] => 2025-03
+    [miesac_rok_3] => 
+    [miesac_rok_4] => 
+    [miesac_rok_5] => 2025-03
+    [Zapisz] => Zapisz
+)

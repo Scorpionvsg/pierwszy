@@ -65,10 +65,10 @@
     if($_SERVER['REQUEST_METHOD']==='POST'){
         if($save){
             $filename = 'terminy.txt';
-            $fileHandle = fopen($filename,'a');
+            $file = fopen($filename,'a');
             $myData = date('Y-m-d H:i:s')."\n". print_r($_POST,true);
-            fwrite($fileHandle,$myData);
-            fclose($fileHandle);
+            fwrite($file,$myData);
+            fclose($file);
             echo '<p>Dane zostały zapisane do pliku ',$filename. '</p>';
         }
     }?>
