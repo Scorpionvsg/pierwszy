@@ -78,3 +78,55 @@ Array
     [miesac_rok_5] => 
     [Zapisz] => Zapisz
 )
+2025-02-27 15:47:57
+Array
+(
+    [terminy] => Array
+        (
+            [0] => termin_1
+            [1] => termin_2
+            [2] => termin_5
+        )
+
+    [miesac_rok_1] => 2025-07
+    [miesac_rok_2] => 
+    [miesac_rok_3] => 2025-04
+    [miesac_rok_4] => 
+    [miesac_rok_5] => 
+    [Zapisz] => Zapisz
+)
+2025-02-27 15:48:46
+Array
+(
+    [terminy] => Array
+        (
+            [0] => termin_1
+            [1] => termin_2
+            [2] => termin_5
+        )
+
+    [miesac_rok_1] => 2025-07
+    [miesac_rok_2] => 
+    [miesac_rok_3] => 2025-04
+    [miesac_rok_4] => 
+    [miesac_rok_5] => 
+    [Zapisz] => Zapisz
+)
+2025-02-27 15:49:26
+Array
+(
+    [terminy] => Array
+        (
+            [0] => termin_1
+            [1] => termin_3
+            [2] => termin_4
+            [3] => termin_5
+        )
+
+    [miesac_rok_1] => 2025-03
+    [miesac_rok_2] => 2025-04
+    [miesac_rok_3] => 2025-03
+    [miesac_rok_4] => 
+    [miesac_rok_5] => 
+    [Zapisz] => Zapisz
+)

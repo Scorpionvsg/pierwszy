@@ -23,6 +23,7 @@
         input{
             background-color:peru;
             border-color: sandybrown;
+            font-family: "Sigmar", serif;
         }
         input[type="checkbox"]{
             accent-color:tan;
@@ -70,10 +71,11 @@
             fclose($fileHandle);
             echo '<p>Dane zostały zapisane do pliku ',$filename. '</p>';
         }
-    }
+    }?>
+    <pre><?php
     print_r($_POST);
     var_dump($save);
     ?>
-
+</pre>
 </body>
 </html>
