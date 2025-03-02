@@ -13,7 +13,7 @@ session_start();?>
     <h1>Panel administracyjny</h1>
     <?php
     if(isset($_SESSION["login_status"]) && $_SESSION["login_status"]){
-        echo "Jestes zalogowany jako ". $_SESSION['login'] ;
+        echo "Jesteś zalogowany jako ". $_SESSION['login'] ;
     }else{
         echo "Nie jestes jeszcze zalogowany";
     }  
