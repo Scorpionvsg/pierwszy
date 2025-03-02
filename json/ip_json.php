@@ -27,7 +27,7 @@
         </fieldset>
         <fieldset>
             <legend>Zwrócone dane w (array)<legend>
-                <label><?= print_r($_POST)?></label>
+                <label><?php  print_r($_POST)?></label>
         </fieldset>
     </form>
 </body>
