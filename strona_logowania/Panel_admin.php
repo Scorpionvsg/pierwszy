@@ -1,4 +1,5 @@
-<?php include_once "css.html";?>
+<?php include_once "css.html";
+session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,13 @@
 </head>
 <body>
     <?php include "menu.php";?>
-    <h1>Admin</h1>
-    <?php include "stopka.php";?>
+    <h1>Panel administracyjny</h1>
+    <?php
+    if(isset($_SESSION["login_status"]) && $_SESSION["login_status"]){
+        echo "Jestes zalogowany jako ". $_SESSION['login'] ;
+    }else{
+        echo "Nie jestes jeszcze zalogowany";
+    }  
+     include "stopka.php";?>
 </body>
 </html>

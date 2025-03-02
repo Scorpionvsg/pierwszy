@@ -1,4 +1,5 @@
-<?php include_once "css.html";?>
+<?php include_once "css.html";
+session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,12 @@
 
     <?php include "menu.php";?>
     <h1>Strona główna</h1>
-    <?php include "stopka.php";?>
+    <?php
+    if(isset($_SESSION["login_status"]) && $_SESSION["login_status"]){
+        echo "Witaj ". $_SESSION['login'] ;
+    }else{
+        echo "Witaj gościu!";
+    }  
+     include "stopka.php";?>
 </body>
 </html>

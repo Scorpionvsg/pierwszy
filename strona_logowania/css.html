@@ -5,6 +5,7 @@
     }
     body{
         background-color: lightsalmon;
+        font-family:"Monotype Corsiva";
     }
     div{
         text-align: center;
@@ -22,16 +23,21 @@
     animation: buttonFadeIn 0.5s ease-out;
 }
 .button:hover {
-    background-color: #0056b3; 
+    background-color: #2f93ff; 
     transform: scale(1.05);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
-.button:active, .button.clicked {
-    background-color: #003f7f; 
-    transform: scale(1.1);
+.button_active {
+    background-color: #101472; 
+    transform: scale(1.5);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
 label{
     margin: 10px;
+}
+input[type="submit"]{
+    margin: 5px;
+    padding:5px;
+    background-color: darkorange;
 }
 </style>
