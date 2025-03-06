@@ -1,5 +1,10 @@
 <?php include_once "css_cook.html";
-session_start();?>
+session_start();
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    setcookie($_POST['nazc'],$_POST['zaw'],($_POST['czas']));
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +23,14 @@ session_start();?>
     <?php include "menu_cook.php";?>
     <h1>Ustaw Ciastko</h1>
     <?php
+     
     if(isset($_SESSION["login_status"]) && $_SESSION["login_status"]){?>
     <form method="post">
+        <?php
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            echo "Ciastko zostało ustwione";
+        }
+        ?>
         <fieldset>
             <legend>Nazwa ciasteczka</legend>
             <input type="text" id="nazc" name="nazc" readonly value="good_password_definition">
@@ -38,13 +49,11 @@ session_start();?>
         </fieldset>
     </form>
      <?php
-     if(isset($_POST["ustaw"])){
-       
-     }
-
+    
     }else{
         echo "Musisz być zalogowany, aby ustawić ciastko";
-    }  
+    }
+    
      include "stopka_cook.php";?>
 </body>
 </html>
