@@ -11,24 +11,40 @@
     </style>
 </head>
 <body>
+<form method="post">
     <?php
-    if($_SERVER['REQUEST_METHOD']==="POST"){
+    $check=isset($_POST['url']) ? $_POST['url'] : "";
+    if($_SERVER['REQUEST_METHOD']==="POST"){?>
+    <fieldset>
+        <legend>Sprawdz przybliżoną lokalizacje adresu IP v. 4<legend>
+            <label for="url">http://ip-api.com/json/<input type="text" id="dal" name="url" value="<?= $check ? "$check" : ''?>" require></label>
+            <input type="submit" id="spr" name="spr" value="Sprawdź IP">
+            </fieldset>
+    <fieldset>
+        <legend>Zwrócone dane w (json)</legend>
+            <?= json_encode(file_get_contents("http://ip-api.com/json/".$_POST['url']))?>
+        </fieldset>
+    <fieldset>
+        <legend>Zwrócone dane w (array)</legend>
+        <pre>
+            <?php print_r(file_get_contents("http://ip-api.com/json/".$_POST['url']));?>
+        </pre>
+    </fieldset><?php
+    }else{
+        ?>
+        <fieldset>
+                <legend>Sprawdz przybliżoną lokalizacje adresu IP v. 4<legend>
+                    <label for="url">http://ip-api.com/json/<input type="text" id="dal" name="url" require></label>
+                    <input type="submit" id="spr" name="spr" value="Sprawdź IP">
+            </fieldset>
+            <fieldset>
+            <legend>Zwrócone dane w (json)</legend>
+            </fieldset>
+        <fieldset>
+            <legend>Zwrócone dane w (array)</legend>
+        </fieldset>
 
-    }
-    ?>
-    <form method="post">
-        <fieldset>
-            <legend>Sprawdz przybliżoną lokalizacje adresu IP v. 4<legend>
-                <label for="nam">http://ip-api.com/json/<input id="dal" name="nam"></label>
-        </fieldset>
-        <fieldset>
-            <legend>Zwrócone dane w (json)<legend>
-                <?= json_encode($_POST)?>
-        </fieldset>
-        <fieldset>
-            <legend>Zwrócone dane w (array)<legend>
-                <label><?php  print_r($_POST)?></label>
-        </fieldset>
-    </form>
+        </form><?php
+    }?>
 </body>
 </html>
