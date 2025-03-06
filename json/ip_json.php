@@ -27,7 +27,7 @@
     <fieldset>
         <legend>Zwrócone dane w (array)</legend>
         <pre>
-            <?php print_r(json_decode((file_get_contents("http://ip-api.com/json/".$_POST['url']))));?>
+            <?php print_r(json_decode(file_get_contents("http://ip-api.com/json/".$_POST['url'])));?>
         </pre>
     </fieldset><?php
     }else{
