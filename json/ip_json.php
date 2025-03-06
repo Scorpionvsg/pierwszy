@@ -16,18 +16,18 @@
     $check=isset($_POST['url']) ? $_POST['url'] : "";
     if($_SERVER['REQUEST_METHOD']==="POST"){?>
     <fieldset>
-        <legend>Sprawdz przybliżoną lokalizacje adresu IP v. 4<legend>
+        <legend>Sprawdz przybliżoną lokalizacje adresu IP v. 4</legend>
             <label for="url">http://ip-api.com/json/<input type="text" id="dal" name="url" value="<?= $check ? "$check" : ''?>" require></label>
             <input type="submit" id="spr" name="spr" value="Sprawdź IP">
             </fieldset>
     <fieldset>
         <legend>Zwrócone dane w (json)</legend>
-            <?= json_encode(file_get_contents("http://ip-api.com/json/".$_POST['url']))?>
+            <?= (file_get_contents("http://ip-api.com/json/".$_POST['url']))?>
         </fieldset>
     <fieldset>
         <legend>Zwrócone dane w (array)</legend>
         <pre>
-            <?php print_r(file_get_contents("http://ip-api.com/json/".$_POST['url']));?>
+            <?php print_r(json_decode((file_get_contents("http://ip-api.com/json/".$_POST['url']))));?>
         </pre>
     </fieldset><?php
     }else{
@@ -46,5 +46,6 @@
 
         </form><?php
     }?>
+    
 </body>
 </html>
