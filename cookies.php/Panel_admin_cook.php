@@ -1,7 +1,7 @@
 <?php include_once "css_cook.html";
 session_start();
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
-    setcookie($_POST['nazc'],$_POST['zaw'],($_POST['czas']));
+    setcookie($_POST['nazwacook'],$_POST['zaw'],(int)$_POST['czas']);
 }
 
 ?>
@@ -33,7 +33,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         ?>
         <fieldset>
             <legend>Nazwa ciasteczka</legend>
-            <input type="text" id="nazc" name="nazc" readonly value="good_password_definition">
+            <input type="text" id="nazwaccook" name="nazwacook" readonly value="good_password_definition">
         </fieldset>
         <fieldset>
             <legend>Wygasa:(w sekundach)</legend>
@@ -53,6 +53,15 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     }else{
         echo "Musisz być zalogowany, aby ustawić ciastko";
     }
+    if(isset($_COOKIE['nazwacook'])){?>
+        <p>
+            <?= $_COOKIE['zaw']?>
+        </p> <?php
+    }else{?>
+        <p>
+            No właśnie jak...
+        </p>
+    <?php } 
     
      include "stopka_cook.php";?>
 </body>

@@ -12,12 +12,17 @@ session_start();?>
 
     <?php include "menu_cook.php";?>
     <h1>Strona główna</h1>
+    Jak wygląda silne hasło?
     <?php
-    if(isset($_SESSION["login_status"]) && $_SESSION["login_status"]){
-        echo "Witaj ". $_SESSION['login'] ;
-    }else{
-        echo "Witaj gościu!";
-    }  
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){?>
+        <p>
+            <?= $_COOKIE['zaw']?>
+        </p> <?php
+    }else{?>
+        <p>
+            No właśnie jak...
+        </p>
+    <?php }  
      include "stopka_cook.php";?>
 </body>
 </html>
