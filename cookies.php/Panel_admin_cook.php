@@ -1,7 +1,7 @@
 <?php include_once "css_cook.html";
 session_start();
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
-    setcookie($_POST['nazwacook'],$_POST['zaw'],(int)$_POST['czas']);
+    setcookie($_POST['nazwacook'],$_POST['zaw'],time() + $_POST['czas']);
 }
 
 ?>
