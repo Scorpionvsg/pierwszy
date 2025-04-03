@@ -19,47 +19,48 @@ session_start();
 <body>
     <?php
     include "debug.php";
-    $url="https://opentdb.com/api.php?amount=1&type=multiple";
-    $con=file_get_contents($url);
+    $con="{\"response_code\":0,\"results\":[{\"type\":\"multiple\",\"difficulty\":\"easy\",\"category\":\"Science & Nature\",\"question\":\"What is the hottest planet in the Solar System?\",\"correct_answer\":\"Venus\",\"incorrect_answers\":[\"Mars\",\"Mercury\",\"Jupiter\"]}]}";
     $data=json_decode($con,true);
-    $dif=$data["results"][0]["difficulty"];
-    $catg=$data["results"][0]["category"];
-    $quest=$data["results"][0]["question"];
-    $cor_ans=$data["results"][0]["correct_answer"];
-    $all_ans=$data["results"][0]["incorect_answers"];
-    $all_ans[]=$cor_ans;
-    shuffle($all_ans);
-    ?>
     
-        <?= json_encode($con); ?>
-        <pre>
-        <h2>JSON</h2>
-            <?php print_r(json_decode($con)) 
-            //zmienne sesji
-            // zmiennse post?>
-        </pre>
-        <pre>
-            <h2>$_SESSION</h2>
-            <?php print_r($_SESSION) ?>
-        </pre>
-        <pre>
-            <h2>$_POST</h2>
-            <?php print_r($_POST) ?>
-        </pre>
-        
+        /*$url="https://opentdb.com/api.php?amount=1&type=multiple";
+        $con=file_get_contents($url);*/
+        $dif=$data["results"][0]["difficulty"];
+        $catg=$data["results"][0]["category"];
+        $quest=$data["results"][0]["question"];
+        $cor_ans=$data["results"][0]["correct_answer"];
+        $all_ans=$data["results"][0]["incorrect_answers"];
+        $all_ans[]=$cor_ans;
+        shuffle($all_ans);
+        $_SESSION["difficulty"]=$dif;
+        $_SESSION["category"]=$catg;
+        $_SESSION["question"]=$quest;
+        $_SESSION["correct_answer"]=$cor_ans;
+    
+    
+        ?>
     
     <form action="odpowiedź" method="post">
         <div>
-            <h1>Pytanie</h1>
+            <h1>Prosty quiz z OpenTDB</h1>
+            <p>Trudność: <?=$_SESSION["difficulty"]; ?></p>
+            <p>Kategoria: <?=$_SESSION["category"]; ?></p>
+            <p>Pytanie: <?=$_SESSION["question"]; ?></p>
+            
             <?php
             foreach($all_ans as $tmp){?>
-                <input type=radio name="btw[]" value=$tmp><label for=$tmp><?=$tmp?></label>
-            <?php } ?>
+                <input type=radio name="btw[]" value="<?=$tmp?>"><label for="btw[]"><?=$tmp?></label><br>
+            <?php } ?><br>
+            <input type=submit name="zatw" value="Sprawdź odpowiedź">
+            <?php 
+            if($_SERVER['REQUEST_METHOD']==='POST'){
+               
+            }
+            ?>
         </div>
     </form>
 
 
-
+    
 
 </body>
 </html>
