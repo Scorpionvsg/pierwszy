@@ -19,11 +19,12 @@ session_start();
 <body>
     <?php
     include "debug.php";
-    $con="{\"response_code\":0,\"results\":[{\"type\":\"multiple\",\"difficulty\":\"easy\",\"category\":\"Science & Nature\",\"question\":\"What is the hottest planet in the Solar System?\",\"correct_answer\":\"Venus\",\"incorrect_answers\":[\"Mars\",\"Mercury\",\"Jupiter\"]}]}";
-    $data=json_decode($con,true);
+    //$con="{\"response_code\":0,\"results\":[{\"type\":\"multiple\",\"difficulty\":\"easy\",\"category\":\"Science & Nature\",\"question\":\"What is the hottest planet in the Solar System?\",\"correct_answer\":\"Venus\",\"incorrect_answers\":[\"Mars\",\"Mercury\",\"Jupiter\"]}]}";
     
-        /*$url="https://opentdb.com/api.php?amount=1&type=multiple";
-        $con=file_get_contents($url);*/
+    
+        $_SESSION['url']="https://opentdb.com/api.php?amount=1&type=multiple";
+        $_SESSION['con']=file_get_contents($_SESSION['url']);
+        $data=json_decode($_SESSION['con'],true);
         $dif=$data["results"][0]["difficulty"];
         $catg=$data["results"][0]["category"];
         $quest=$data["results"][0]["question"];
@@ -35,6 +36,7 @@ session_start();
         $_SESSION["category"]=$catg;
         $_SESSION["question"]=$quest;
         $_SESSION["correct_answer"]=$cor_ans;
+        $_SESSION["licz"]=0;
     
     
         ?>
@@ -48,14 +50,9 @@ session_start();
             
             <?php
             foreach($all_ans as $tmp){?>
-                <input type=radio name="btw[]" value="<?=$tmp?>"><label for="btw[]"><?=$tmp?></label><br>
+                <input type=radio name="user" value="<?=$tmp?>"><label for="btw[]"><?=$tmp?></label><br>
             <?php } ?><br>
             <input type=submit name="zatw" value="Sprawdź odpowiedź">
-            <?php 
-            if($_SERVER['REQUEST_METHOD']==='POST'){
-               
-            }
-            ?>
         </div>
     </form>
 
