@@ -1,7 +1,7 @@
 <h1>Tabela <i>książki</i></h1>
 
 <?php
-$sql = "SELECT * FROM ksiazki;";
+$sql = "SELECT * FROM `ksiazki` join dzialy on ksiazki.Id_dzial=dzialy.Id_dzial;";
 $result = $conn->query($sql);
 ?>
 
@@ -19,10 +19,18 @@ if ($result->num_rows > 0) {
     $miejsce_wyd=$row["Miejsce_wyd"];
     $rok=$row["Rok_wyd"];
     $objetosc_ks=$row["Objetosc_ks"];
-    $cena=$row["Cena"];
+    $cena=explode(".",$row["Cena"]);
     $id_dzial=$row["Id_dzial"];
 
-        echo "<tr><td>".$id."</td><td>".$tytul."</td><td>".$autor."</td><td>".$wydaw."</td><td>".$miejsce_wyd."</td><td>".$rok."</td><td>".$objetosc_ks."</td><td>".$cena."</td><td>".$id_dzial."</td></tr>";
+        echo "<tr><td>".$id.
+        "</td><td>".$tytul.
+        "</td><td>".$autor.
+        "</td><td>".$wydaw.
+        "</td><td>".$miejsce_wyd.
+        "</td><td>".$rok.
+        "</td><td>".$objetosc_ks.
+        "</td><td>".$cena[0]." zł", $cena[1]." gr".
+        "</td><td>".$id_dzial."</td></tr>";
   }
 } else {
   echo "0 results";

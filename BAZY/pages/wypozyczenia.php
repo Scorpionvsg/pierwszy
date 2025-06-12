@@ -19,7 +19,13 @@ if ($result->num_rows > 0) {
     $data_w=$row["Data_wypozyczenia"];
     $data_z=$row["Data_zwrotu"];
 
-        echo "<tr><td>".$nr_t."</td><td>".$id."</td><td>".$id_p."</td><td>".$nr_cz."</td><td>".$data_w."</td><td>".$data_z."</td></tr>";
+        echo "<tr><td>".$nr_t.
+        "</td><td>".$id.
+        "</td><td>".$id_p.
+        "</td><td>".$nr_cz.
+        "</td><td>".$data_w.
+        "</td><td>".$data_z.
+        "</td></tr>";
   }
 } else {
   echo "0 results";

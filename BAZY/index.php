@@ -2,55 +2,13 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-.column-left {
-  float: left;
-  width: 25%;
-  height: 100%;
-}
-
-.column-right {
-  float: left;
-  width: 75%;
-  padding: 15px;
-  height: 100%;
-  color: white;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-a:active {
-  color: darkgreen;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a{
-    padding:15px;
-    text-decoration: none;
-    color: white;
-    font-size:17px;
-}
-
-a:hover {
-  background-color: yellow;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<?php include_once 'db_con.php'?>
 
 <div class="row">
-  <nav class="column-left" style="background-color: #626F47;">
+  <nav class="column-left" style="background-color:rgb(64, 197, 38);">
     <a href="index.php?page=glowna" style="display: block;">Strona główna</a>
     <a href="index.php?page=czytelnicy" style="display: block;">Tabela <i>czytelnicy</i></a>
     <a href="index.php?page=dzialy" style="display: block;">Tabela <i>działy</i></a>
@@ -60,7 +18,7 @@ a:hover {
     <a href="index.php?page=wypozyczenia" style="display: block;">Tabela <i>wypożyczenia</i></a>
   </nav>
 
-  <main class="column-right" style="background-color: #A4B465;">
+  <main class="column-right" style="background-color:rgb(212, 231, 133);">
     <?php
             if (isset($_GET['page'])) {
             if (file_exists('pages/' . $_GET['page'] . '.php')) {
